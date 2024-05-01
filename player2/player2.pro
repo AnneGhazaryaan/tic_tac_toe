@@ -1,8 +1,8 @@
-QT += widgets network
+QT += widgets network sql
 
 CONFIG += c++11
 
-TARGET = player1
+TARGET = player2
 TEMPLATE = app
 
 SOURCES += \
@@ -12,12 +12,14 @@ SOURCES += \
     mainwindow.cpp \
     networkmanager.cpp
 
-
-HEADERS += mainwindow.h \
+HEADERS += \
+    mainwindow.h \
     cryptomanager.h \
     gamelogic.h \
     networkmanager.h
-FORMS += mainwindow.ui
+
+FORMS += \
+    mainwindow.ui
 
 INCLUDEPATH += /usr/include/openssl
 LIBS += -lssl -lcrypto
